@@ -2,6 +2,7 @@ import Router from './router.js';
 
 export default class Navigation {
     _length;
+    
     constructor() {
        this._length = document.getElementById('nav').children.length;
        this.click();
