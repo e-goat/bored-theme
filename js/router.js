@@ -4,17 +4,17 @@ export default class Router {
 
     constructor() {
         this._routes = {
-            404       : '/404.html',
-            '/'       : '/index.html',
+            '/'       : '/root.html',
+            '/home'   : '/home.html',
+            '/about'  : '/about.html',
             '/contact': '/contact.html',
         }
 
         this._handleLocation = async () => {
-            const path = window.location.pathname;
-            const route = this._routes[path] || this._routes[404];
-            const html = await fetch(route).then((data) => data.text())
-            console.log(route);
-            document.getElementById("main-page").innerHTML = html;
+            const path = window.location.pathname,
+                route = this._routes[path] || this._routes[404],
+                html = await fetch(route).then((data) => data.text());
+            return document.getElementById("app").innerHTML = html;
         }
     }
     
@@ -28,6 +28,6 @@ export default class Router {
     init = () => {
         window.onpopstate = this._handleLocation();
         window.route = this.getRoute();
-        this._handleLocation();
+        this.getRoute();
     }
 }
