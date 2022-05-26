@@ -10,25 +10,26 @@ export default class Navigation {
     }
 
     onClick() {
-        const router = new Router()
-
-        const itemsLoop = () => [...document.querySelectorAll('a.nav-b')].forEach(
-            element => {
-                element
-                    .addEventListener('click', event => { 
-                    const navNode = event.path[0];
-                    if ( !navNode.classList.contains('active') ) {
-                        document.querySelectorAll('a.nav-b').forEach(btn => {
-                            btn.classList.remove('active')
-                        })
-                        navNode.classList.add('active')
-                    }
-                    router.init();
-                })     
-            }
-        )
-
-        itemsLoop();
+        const router = new Router();
+        const initiateRouter = () => {
+            [...document.querySelectorAll('a.nav-b')].forEach(
+                element => {
+                    element
+                        .addEventListener('click', event => { 
+                        const navNode = event.path[0];
+                        if ( !navNode.classList.contains('active') ) {
+                            document.querySelectorAll('a.nav-b').forEach(btn => {
+                                btn.classList.remove('active')
+                            })
+                            navNode.classList.add('active')
+                        }
+                        router.init();
+                    })     
+                }
+            )
+        }
+        
+        return initiateRouter();
     }
 
     stickyOnTop() {
