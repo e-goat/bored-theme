@@ -37,7 +37,7 @@ body {
 }
 
 /* Circled profile image */
-.container, .nav-title {
+.container, .nav-title, .app {
   display: flex;
   justify-content: center;
 }
@@ -60,9 +60,9 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(216, 191, 216, 0.356);
-  animation: textclip 5s linear infinite;
+  animation: textclip 1.5s linear infinite;
   animation-iteration-count: 1;
-  font-size: 1rem;
+  font-size: 2rem;
  }
  
 @keyframes textclip {
@@ -86,6 +86,11 @@ body {
     float: none;
     display: block;
   }
+
+  .nav-title {
+    font-size: 1rem;
+    /* display: block; */
+  }  
 
 
 }

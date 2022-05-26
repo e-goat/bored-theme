@@ -2,11 +2,11 @@ import Router from './router.js';
 
 export default class Navigation {
     _length;
-    
+
     constructor() {
-       this._length = document.getElementById('nav').children.length;
-       this.click();
-       this.routing();
+       this._length = document.getElementById('nav').children.length
+       this.click()
+       this.routing()
     }
 
     click() {
@@ -16,22 +16,24 @@ export default class Navigation {
                 let navNode = event.path[0];
                 if ( !navNode.classList.contains('active') ) {
                     document.querySelectorAll('a.nav-b').forEach(btn => {
-                        btn.classList.remove('active');
+                        btn.classList.remove('active')
                     })
-                    navNode.classList.add('active');
+                    navNode.classList.add('active')
                 }
             })
         }
     }
 
     routing() {
-        const router = new Router();
+        const router = new Router()
     
-        return [...document.querySelectorAll('a.nav-b')].forEach(element => {
-            element.addEventListener('click', () => {
-                return router.init();
-            })          
-        });
+        return [...document.querySelectorAll('a.nav-b')].forEach(
+            element => {
+            element
+                .addEventListener('click', () => {
+                    return router.init();
+                })          
+        })
     }
 }
 
