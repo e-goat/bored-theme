@@ -1,6 +1,17 @@
 body {
   background-color: #181818;
-  color: azure;
+  font-family: 'Akshar', sans-serif;  
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */  
 }
 
 /* Add a black background color to the top navigation */
@@ -37,20 +48,37 @@ body {
 }
 
 /* Circled profile image */
-.container, .nav-title, .app {
+.container, .nav-title {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  color: #f2f2f2; 
+}
+
+.container-body, .container-title  {
+  color: rgb(212, 145, 156); 
+  left:25%;
+  top:25%;
+  text-align:center;
+  width:50%;
+  font-family: 'Quicksand', sans-serif!important;
 }
 
 .nav-title {
+  cursor:default;
   font-family: 'Akshar', sans-serif;
-  /* font-family: 'Plus Jakarta Sans', sans-serif; */
   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     azure 0%,
-    #181818 29%,
-    #333 67%,
+    pink 15%,
+    rgb(194, 86, 104) 25%,
+    #181818 30%,
+    #333 60%,
     black 100%
   );
   background-size: auto auto;
@@ -63,7 +91,8 @@ body {
   animation: textclip 1.5s linear infinite;
   animation-iteration-count: 1;
   font-size: 2rem;
- }
+}
+
  
 @keyframes textclip {
  to {
@@ -72,11 +101,13 @@ body {
 }
 
 .circleimg img {
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
+  border-radius: 50%; 
   margin: 1rem 1rem;
-  border: 2px solid #f2f2f2;
+  border: 2px solid rgb(212, 145, 156); 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;  
 }
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
@@ -90,7 +121,13 @@ body {
   .nav-title {
     font-size: 1rem;
     /* display: block; */
-  }  
-
-
+  }
+  
+  .container {
+    left:25%;
+    top:25%;
+    /* position:absolute; */
+    text-align:center;
+    width:50%;
+  }
 }

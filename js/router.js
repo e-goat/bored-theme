@@ -4,10 +4,10 @@ export default class Router {
 
     constructor() {
         this._routes = {
-            '/'       : '/root.html',
-            '/home'   : '/home.html',
-            '/about'  : '/about.html',
-            '/contact': '/contact.html',
+            '/'       : '/view/root.html',
+            '/home'   : '/view/home.html',
+            '/about'  : '/view/about.html',
+            '/contact': '/view/contact.html',
         }
 
         this._handleLocation = async () => {
