@@ -171,4 +171,13 @@ footer {
     width:100%;
     overflow: auto;
   }
+
+  #container .container-body, #container .container-title  {
+    text-align:center;
+    width:75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+  }
 }
