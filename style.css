@@ -3,7 +3,7 @@ body {
   font-family: 'Akshar', sans-serif;  
   margin: 0%;
   padding: 0%;
-  width: 100%;
+  overflow: overlay;
 
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -25,12 +25,11 @@ body {
 }
 
 .sticky-nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
 }
 
-/* Style the links inside the navigation bar */
 #nav a {
   display: inline-block;
   color: #f2f2f2;
@@ -40,20 +39,17 @@ body {
   font-size: 17px;
 }
   
-/* Change the color of links on hover */
 #nav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Add a color to the active/current link */
 #nav a.active {
   background-color: #ddd;
   color: black;
 }
 
-/* Circled profile image */
-#container, .nav-title {
+#container, #page-title {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -66,14 +62,12 @@ body {
 
 #container .container-body, #container .container-title  {
   color: rgb(212, 145, 156); 
-  left:25%;
-  top:25%;
   text-align:center;
   width:50%;
   font-family: 'Quicksand', sans-serif!important;
 }
 
-.nav-title {
+#page-title {
   cursor:default;
   font-family: 'Akshar', sans-serif;
   text-transform: uppercase;
@@ -97,7 +91,6 @@ body {
   animation-iteration-count: 1;
   font-size: 2rem;
 }
-
  
 @keyframes textclip {
  to {
@@ -115,6 +108,22 @@ body {
   width: 50%;  
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 /* RESPONSIVENESS */
 @media screen and (max-width: 600px) {
   #nav a {
@@ -122,7 +131,7 @@ body {
     display: block;
   }
 
-  .nav-title {
+  #page-title {
     font-size: 1rem;
   }
 
@@ -137,6 +146,7 @@ body {
     left:25%;
     top:25%;
     text-align:center;
-    width:50%;
+    width:100%;
+    overflow: auto;
   }
 }

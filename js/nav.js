@@ -26,10 +26,10 @@ export default class Navigation {
     }
 
     stickyOnTop() {
-        var navbar  = document.getElementById('nav'),
+        const navbar  = document.getElementById('nav'),
             sticky  = navbar.offsetTop;
         
-        window.onscroll = function() { 
+        return window.onscroll = () => { 
             window.pageYOffset >= sticky ? navbar.classList.add('sticky-nav')
                 : navbar.classList.remove('sticky-nav')
         }
@@ -40,13 +40,12 @@ export default class Navigation {
     
         return [...document.querySelectorAll('a.nav-b')].forEach(
             element => {
-            element
-                .addEventListener('click', () => {
-                    return router.init();
-                })          
-        })
+                element
+                    .addEventListener('click', () => {
+                        return router.init();
+                    })          
+            }
+        )
     }
-
-
 }
 
