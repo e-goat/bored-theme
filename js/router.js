@@ -4,7 +4,7 @@ export default class Router {
 
     constructor() {
         this._routes = {
-            '/'       : '/view/root.html',
+            '/'       : '/index.html',
             '/home'   : '/view/home.html',
             '/about'  : '/view/about.html',
             '/contact': '/view/contact.html',
@@ -13,7 +13,8 @@ export default class Router {
         this._handleLocation = async () => {
             const path = window.location.pathname,
                 route  = this._routes[path] || this._routes[404],
-                html   = await fetch(route).then((data) => data.text());
+                html   = await fetch(route).then((data) => data.text());   
+
             return document.getElementById("container").innerHTML = html;
         }
     }

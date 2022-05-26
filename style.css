@@ -98,7 +98,7 @@ body {
   -webkit-text-fill-color: rgba(216, 191, 216, 0.356);
   animation: textclip 2.5s linear infinite;
   animation-iteration-count: 1;
-  font-size: 2rem;
+  font-size:larger;
 }
  
 @keyframes textclip {
