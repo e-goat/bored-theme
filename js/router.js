@@ -12,9 +12,9 @@ export default class Router {
 
         this._handleLocation = async () => {
             const path = window.location.pathname,
-                route = this._routes[path] || this._routes[404],
-                html = await fetch(route).then((data) => data.text());
-            return document.getElementById("app").innerHTML = html;
+                route  = this._routes[path] || this._routes[404],
+                html   = await fetch(route).then((data) => data.text());
+            return document.getElementById("container").innerHTML = html;
         }
     }
     
@@ -26,8 +26,8 @@ export default class Router {
     }
 
     init = () => {
-        window.onpopstate = this._handleLocation();
-        window.route = this.getRoute();
+        window.onpopstate   = this._handleLocation();
+        window.route        = this.getRoute();
         this.getRoute();
     }
 }
