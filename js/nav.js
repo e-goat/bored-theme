@@ -7,6 +7,7 @@ export default class Navigation {
        this._length = document.getElementById('nav').children.length
        this.click()
        this.routing()
+       this.stickyOnTop()
     }
 
     click() {
@@ -24,6 +25,16 @@ export default class Navigation {
         }
     }
 
+    stickyOnTop() {
+        var navbar  = document.getElementById('nav'),
+            sticky  = navbar.offsetTop;
+        
+        window.onscroll = function() { 
+            window.pageYOffset >= sticky ? navbar.classList.add('sticky-nav')
+                : navbar.classList.remove('sticky-nav')
+        }
+    }
+
     routing() {
         const router = new Router()
     
@@ -35,5 +46,7 @@ export default class Navigation {
                 })          
         })
     }
+
+
 }
 
