@@ -21,8 +21,13 @@ body {
   width: 100%;
   top:0;
   padding-top:0;
-  position:relative;
   margin:0;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -48,7 +53,7 @@ body {
 }
 
 /* Circled profile image */
-.container, .nav-title {
+#container, .nav-title {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -59,7 +64,7 @@ body {
   color: #f2f2f2; 
 }
 
-.container-body, .container-title  {
+#container .container-body, #container .container-title  {
   color: rgb(212, 145, 156); 
   left:25%;
   top:25%;
@@ -110,8 +115,7 @@ body {
   width: 50%;  
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+/* RESPONSIVENESS */
 @media screen and (max-width: 600px) {
   #nav a {
     float: none;
@@ -120,13 +124,18 @@ body {
 
   .nav-title {
     font-size: 1rem;
-    /* display: block; */
   }
+
+  .circleimg img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+  }  
   
-  .container {
+  #container {
     left:25%;
     top:25%;
-    /* position:absolute; */
     text-align:center;
     width:50%;
   }
