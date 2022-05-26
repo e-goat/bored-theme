@@ -1,2 +1,5 @@
 import Navigation from './nav.js';
-new Navigation();
+
+(() => {
+    const nav = new Navigation();
+})();
