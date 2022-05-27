@@ -98,7 +98,7 @@ body {
   -webkit-text-fill-color: rgba(216, 191, 216, 0.356);
   animation: textclip 2.5s linear infinite;
   animation-iteration-count: 1;
-  font-size:larger;
+  font-size:3rem;
 }
  
 @keyframes textclip {
@@ -133,17 +133,19 @@ body {
   background: rgb(215, 119, 135);
 }
 
-footer {
+#footer-wrapper {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   background: #333;
-  text-align: center;
   height: fit-content;
   background-color: #333;
-  color: white;
+  color: white;  
+  padding: 1rem;
+  text-align: center;
 }
 
-#footer-wrapper {
-  padding: 1rem;
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid red;
 }
 
 /* RESPONSIVENESS */
