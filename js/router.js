@@ -1,6 +1,7 @@
 export default class Router {
     _handleLocation;
     _routes;
+    _getSelectedRoute;
 
     constructor() {
         this._routes = {
@@ -17,6 +18,7 @@ export default class Router {
 
             return document.getElementById("container").innerHTML = html;
         }
+        
     }
     
     getRoute = event => {

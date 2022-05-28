@@ -108,13 +108,15 @@ body {
 }
 
 .circleimg img {
-  border-radius: 50%; 
+  /* border-radius: 50%;  */
   margin: 1rem 1rem;
   border: 2px solid rgb(212, 145, 156); 
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;  
+  width: 100%;
+  border-radius: 50% 0 50% 0; 
+  margin: 0 0 5rem 0;
 }
 
 ::-webkit-scrollbar {
@@ -131,6 +133,7 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(215, 119, 135);
+  
 }
 
 footer {
@@ -142,8 +145,38 @@ footer {
   color: white;
 }
 
-#footer-wrapper {
+form input[type=text] {
+  color:antiquewhite;
+  width: 100%;
+  padding: 1.5vh;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+form input[type=text]:focus {
+  border: 3px solid #555;
+  background: rgba(255, 128, 149, 0.393);
+}
+
+form label {
+  float: left;
+}
+form input[type="text"] {
+  margin-bottom: 2rem;
+}
+
+form button {
+  width: 15ch;
   padding: 1rem;
+  float: left;
+  cursor: pointer;
+  font-family: 'Akshar', sans-serif;
+  color: rgb(212, 145, 156);
+  background-color: #333;
 }
 
 /* RESPONSIVENESS */
@@ -162,6 +195,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
     width: 100%; 
+    border-radius: 50% 0 50% 0; 
+    margin: 0 0 5rem 0;
   }  
   
   #container {
