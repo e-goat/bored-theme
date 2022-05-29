@@ -141,6 +141,7 @@ footer {
   background: #333;
   text-align: center;
   height: fit-content;
+  padding: 1rem;
   background-color: #333;
   color: white;
 }
@@ -177,6 +178,18 @@ form button {
   font-family: 'Akshar', sans-serif;
   color: rgb(212, 145, 156);
   background-color: #333;
+  opacity: 0.5;
+}
+
+form button:hover { 
+  opacity: 1.0;
+}
+
+.footer-links-wrapper a {
+ padding: 1rem;
+ font-size: 2rem;
+ color: aliceblue;
+ text-decoration: none;
 }
 
 /* RESPONSIVENESS */
