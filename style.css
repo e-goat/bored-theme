@@ -147,7 +147,7 @@ footer {
 }
 
 form input[type=text] {
-  color:antiquewhite;
+  color:black;
   width: 100%;
   padding: 1.5vh;
   margin: 8px 0;
@@ -203,12 +203,12 @@ form button:hover {
     font-size: 1rem;
   }
 
-  .circleimg img {
+  .circleimg {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%; 
-    border-radius: 50% 0 50% 0; 
+    border-radius: 50%; 
     margin: 0 0 5rem 0;
   }  
   
