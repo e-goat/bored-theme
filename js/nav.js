@@ -16,19 +16,20 @@ export default class Navigation {
                 element => {
                     element
                         .addEventListener('click', event => { 
+
                         const navNode = event.path[0];
                         if ( !navNode.classList.contains('active') ) {
                             document.querySelectorAll('a.nav-b').forEach(btn => {
                                 btn.classList.remove('active')
                             })
                             navNode.classList.add('active')
+                            router.init();
                         }
-                        router.init();
-                    })     
+                    })
                 }
             )
         }
-        
+
         return initiateRouter();
     }
 

@@ -1,0 +1,39 @@
+.container-fluid {
+    background-color: #6c757d!important;;
+    width: 100%;
+    height: auto;
+}
+
+/* body{
+    background-color: #343a40!important;  
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  } */
+
+  table {
+    width: 75%;
+    font-family: 'Akshar', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif; 
+  }
+
+  .coin-row{
+    opacity: 0.75;
+    /* pointer-events: none; */
+  }
+
+  .coin-row:hover {
+    opacity: 1;
+  }
+

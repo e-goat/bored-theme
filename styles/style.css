@@ -47,6 +47,7 @@ body {
 #nav a.active {
   background-color: #ddd;
   color: black;
+  pointer-events: none;
 }
 
 #container {
