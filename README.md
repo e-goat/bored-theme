@@ -1,2 +1,2 @@
 # bored-theme
-Just an overcomplicated class based single page application.
+An overcomplicated class based single page application.
