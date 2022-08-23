@@ -1,2 +1,7 @@
 # bored-theme BETA
-An overcomplicated class based single page application.
+An overcomplicated OOP vanilla JS single page application.
+
+NOT FINISHED!
+
+Link:
+https://bored-theme.netlify.app/
