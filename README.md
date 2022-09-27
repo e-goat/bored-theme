@@ -1,5 +1,5 @@
 # bored-theme BETA
-An overcomplicated OOP vanilla JS single page application.
+Overcomplicated OOP tryhard vanilla JS single page application.
 
 NOT FINISHED!
 
